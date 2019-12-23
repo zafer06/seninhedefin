@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,800&display=swap&subset=latin-ext');
+
+body {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+$red:#e23139;
+
+
+.targetList {
+    text-align: center;
+    margin: 80px 0 40px 0;
+    position: relative;
+    h1 {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    color: rgba(175, 47, 47, 0.15);
+    }
+      .nameAndMail {
+        color: #000;
+      outline: none;
+      font-size: 13px;
+      padding: 11px;
+      border: none;
+      letter-spacing: 1px;
+      border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+      }
+    .newTarget {
+      margin-top: 15px;
+      padding: 36px 10px 36px 10px;
+      border: none;
+      background: rgba(0, 0, 0, 0.003);
+      box-shadow: inset 0 -2px 1px rgba(0,0,0,0.08);
+      font-size: 12px;
+      opacity: 0.8;
+      border-left: solid 1px #444;
+      width: 500px;
+      &:focus {
+        outline: none;
+      }
+    }
+    .error {
+      margin-top: 10px;
+      margin-bottom:10px;
+      text-align: left;
+      p {
+        color: $red;
+        font-size: 12px;
+      }
+    }
+    .targetItem{
+      background:#389466;
+      border-left:solid 2px #fff;
+      padding: 13px 13px 13px 25px;
+      font-size: 13px;
+      color:#fff;
+      margin-top: 15px;
+      text-align: left!important;
+        transition: all .5s ease;
+      .closeBtn {
+        float:right;
+        cursor: pointer;
+        font-size: 15px;
+        margin-bottom: 2px;
+      }
+    }
+}
+/*Transition*/
+
+.fade-enter { // Başlangıç değeri 0 yani hiç gözükmeyecek.
+  opacity: 0;
+}
+.fade-enter-active { // Başlangıçtan bitişe kadar geçen zaman
+  transition: opacity 1s ease;
+  transform: scale(1.1);
+}
+.fade-leave-active {
+  transition: opacity 1s ease;
+  opacity: 0;
+}
+
+/*Tramsition 2*/
+.error-enter, .error-enter-active {
+  opacity: 0;
+  transition: all .3s ease;
+  transform: scale(0.7);
+}
+.error-leave-active {
+  transition: all 0.5s ease;
+  opacity:0;
+}
