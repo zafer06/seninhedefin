@@ -11,6 +11,8 @@ COPY go.sum .
 
 RUN go mod download
 
+EXPOSE 8081
+
 COPY . .
 
 CMD ["bee", "run", "-downdoc=true", "-gendoc=true"]

@@ -5,7 +5,6 @@
         <h1> Senin Hedefin </h1>
       </div>
 
-
       <div class="row mt-5">
         <div class="col-lg-6 col-md-6 col-sm-6 col-12 mx-auto">
           <form>
@@ -28,12 +27,12 @@
               </div>
               <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                 <input
-                @keyup.enter="addTarget"
-                type="text"
-                placeholder="Senin Hedefin Nedir?"
-                autofocus="autofocus"
-                autocomplate="off"
-                class="newTarget form-control"
+                    @keyup.enter="addTarget"
+                    type="text"
+                    placeholder="Senin Hedefin Nedir?"
+                    autofocus="autofocus"
+                    autocomplate="off"
+                    class="newTarget form-control"
                 >
                 <transition name="error">
                   <div class="error" v-show="error">
@@ -45,7 +44,7 @@
           </div>
             <div clas="col-lg-12 col-md-12 col-sm-12 col-12">
               <transition-group name="fade" tag="div" appear>
-                <div class="targetItem" v-for="(target, index) in targetItems" :key="index">
+                <div class="targetItem" v-for="target in targetItems" :key="target">
                   <span class="item"> {{target}} </span>
                   <span class="closeBtn" @click="removeTarget">x</span>
                 </div>
@@ -87,6 +86,5 @@ export default {
     }
   }
 }
-
 
 </script>
